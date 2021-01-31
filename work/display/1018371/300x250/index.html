@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8>
+<meta name="ad.size” content=”width=300,height=250">
+<script>
+var clickTag = "http://www.google.com"; 
+</script>
+<style>
+
+
+* {
+  border:0;
+  margin:0;
+  padding:0;
+  background-repeat:no-repeat;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+
+}
+
+.wrapper {
+  position: relative;
+  margin:0 auto;
+  width: 298px;
+  height: 248px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #b2b2b2;
+}
+
+.preloader{
+  position: absolute;
+  width:300px;
+  height:250px;
+  left: 0px;
+  top: 0px;
+  background-color:#fff;
+  z-index:7;
+}
+
+.bg{
+    background-size:contain;
+    position: absolute;
+    overflow: hidden;
+    width: 300px;
+    height: 250px;
+    left: 0;
+    top: 0;
+    z-index:1;
+    background-image:url("bg.jpg");
+}
+
+.logo{
+    background-size:contain;
+    position: absolute;
+    overflow: hidden;
+    width:112px;
+    height:24px;
+    left: 176px;
+    top: 14px;
+    z-index:3;
+    background-image:url("logo.png");
+}
+
+.copy1{
+    background-size:contain;
+    position: absolute;
+    overflow: hidden;
+    width: 171px;
+    height: 20px;
+    left: 20px;
+    top:70px;
+    z-index: 2;
+    background-image:url("copy1.png");
+    opacity:0;
+}
+
+.car1{
+    background-size:contain;
+    position: absolute;
+    overflow: hidden;
+    width: 234px;
+    height: 114px;
+    left: 23px;
+    top:127px;
+    z-index: 5;
+    background-image:url("car1.png");
+    opacity:1;
+}
+
+.copy2{
+    background-size:contain;
+    position: absolute;
+    width:191px;
+    height:45px;
+    left: 20px;
+    top: 60px;
+    z-index: 2;
+    background-image:url("copy2.png");
+    opacity:0;
+}
+
+.car2{
+    background-size:contain;
+    position: absolute;
+    width:214px;
+    height:127px;
+    left:300px;
+    top:110px;
+    z-index: 4;
+    background-image:url("car2.png");
+    opacity:1;
+}
+
+.copy3{
+    background-size:contain;
+    position: absolute;
+    width:130px;
+    height:37px;
+    left: 21px;
+    top: 60px;
+    z-index: 2;
+    background-image:url("copy3.png");
+    opacity:0;
+}
+
+.car3{
+    background-size:contain;
+    position: absolute;
+    width:225px;
+    height:97px;
+    left: 300px;
+    top: 110px;
+    z-index: 2;
+    background-image:url("car3.png");
+    opacity:1;
+}
+
+
+.cta{
+    position: absolute;
+    overflow: hidden;
+    background-size:contain;
+    width:251px;
+    height:39px;
+    z-index: 2;
+    left: 24px;
+    top: 60px;
+    opacity:0;
+    -webkit-backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+
+}
+
+.cta img{
+  width:100%;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="wrapper" class="wrapper">
+
+  <div id="preloader" class="preloader"></div>
+  <div id="bg" class="bg"></div>
+  <div id="logo" class="logo"></div>
+  <div id="copy1" class="copy1"></div>
+  <div id="car1" class="car1"></div>
+  <div id="copy2" class="copy2"></div>
+  <div id="car2" class="car2"></div>
+  <div id="copy3" class="copy3"></div>
+  <div id="car3" class="car3"></div>
+  <div id="cta" class="cta">
+    <img src="cta.png" />
+  </div>
+
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+<script>
+  var creative = {};
+  creative.domElements = {};
+  creative.domElements.wrapper = document.getElementById('wrapper');
+  creative.domElements.preloader = document.getElementById('preloader');
+  creative.domElements.bg = document.getElementById('bg');
+  creative.domElements.logo = document.getElementById('logo');
+  creative.domElements.copy1 = document.getElementById('copy1');
+  creative.domElements.car1 = document.getElementById('car1');
+  creative.domElements.copy2 = document.getElementById('copy2');
+  creative.domElements.car2 = document.getElementById('car2');
+  creative.domElements.copy3 = document.getElementById('copy3');
+  creative.domElements.car3 = document.getElementById('car3');
+  creative.domElements.cta = document.getElementById('cta');
+
+
+  var loop = 0;
+  var isPlaying = false;
+  var tl = new TimelineMax({
+    onComplete:function() {
+      stop();
+    }
+  });
+
+    tl.to(creative.domElements.preloader, 0.5,  { ease: Linear.easeInOut, opacity: 0 }, 0.0);
+
+    tl.to(creative.domElements.copy1, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 0.5);
+
+    tl.to(creative.domElements.copy1, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 3.25);
+    tl.to(creative.domElements.car1, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 3.25);
+
+    tl.to(creative.domElements.copy2, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 3.5);
+    tl.to(creative.domElements.car2, 0.45, { ease: Sine.easeInOut, x:-262, y: +12, force3D:true }, 3.5);
+
+    tl.to(creative.domElements.copy2, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 6.75);
+    tl.to(creative.domElements.car2, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 6.75);
+
+    tl.to(creative.domElements.copy3, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 7.0);
+    tl.to(creative.domElements.car3, 0.45, { ease: Sine.easeInOut, x: -258, y: +20, force3D:false }, 7.0);
+    
+    tl.to(creative.domElements.copy3, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 10.25);
+    
+    tl.to(creative.domElements.car3, 0.35, { ease: Sine.easeInOut, scale: 0.55, x:-330, y:-20, force3D:false }, 10.5);
+    tl.set(creative.domElements.car1, {scale: 0.85, x: -5, y: 13});
+    tl.set(creative.domElements.car2, {scale: 0.65, x: -200, y: -25});
+
+    tl.to(creative.domElements.car1, 0.25, { ease: Sine.easeInOut, opacity:1, force3D:false }, 11.0);
+    tl.to(creative.domElements.car2, 0.25, { ease: Sine.easeInOut, opacity:1, force3D:false }, 11.25);
+
+    tl.to(creative.domElements.cta, 0.25, { ease: Sine.easeInOut, opacity:1, force3D:false }, 11.0);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.05, force3D:true, z:0.001}, 12.0);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.0, force3D:true, z:0.001}, 12.15);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.05, force3D:true, z:0.001}, 12.7);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.0, force3D:true, z:0.001}, 12.85);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.05, force3D:true, z:0.001}, 13.4);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.0, force3D:true, z:0.001}, 13.55);
+
+    function play() {
+      console.log("play")
+      tl.seek(0);
+      tl.play();
+      isPlaying = true;
+    }
+
+    function stop() {
+      console.log("play")
+      tl.seek(tl.duration());
+      tl.pause();
+      isPlaying = false;
+    }
+
+    function togglePlayback(){
+      if(isPlaying){
+        stop();
+      }
+      else{
+        play();
+      }
+    }
+
+    window.onload = function() {
+      document.getElementById("wrapper").addEventListener("click", togglePlayback, !1);
+      tl.seek(tl.duration());
+      tl.pause();
+    }
+
+</script>
+
+</body>
+</html>

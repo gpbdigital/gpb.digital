@@ -1,0 +1,603 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8>
+<meta name="ad.size” content=”width=300,height=250">
+<script>
+var clickTag = "http://www.google.com"; 
+</script>
+<style>
+
+
+* {
+  border:0;
+  margin:0;
+  padding:0;
+  outline:0;
+  box-sizing: content-box;
+  background-repeat:no-repeat;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+
+}
+
+.wrapper {
+  position: relative;
+  margin:0 auto;
+  width: 298px;
+  height: 248px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #b2b2b2;
+}
+
+.preloader{
+  position: absolute;
+  width:300px;
+  height:250px;
+  left: 0px;
+  top: 0px;
+  background-color:#fff;
+  z-index:7;
+}
+
+.main{
+  position: absolute;
+  width: 298px;
+  height: 248px;
+  left: 0px;
+  top: 0px;
+}
+
+.bg{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 300px;
+  height: 250px;
+  left: 0px;
+  top: 0px;
+  z-index:1;
+  background-color:#6d257a;
+}
+
+.logo{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width:47px;
+  height:41px;
+  left:126px;
+  top:30px;
+  z-index:3;
+  background-image:url("logo.png");
+  opacity:0;
+}
+
+.copy1{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 225px;
+  height: 41px;
+  left: 38px;
+  top:103px;
+  z-index: 2;
+  background-image:url("copy1.png");
+  opacity:0;
+}
+
+.t1{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 2;
+  background-image:url("t1.png");
+  opacity:0;
+}
+
+.t2{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  left: 75px;
+  bottom: 0px;
+  z-index: 2;
+  background-image:url("t2.png");
+  opacity:0;
+}
+
+.t3{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  left: 150px;
+  bottom: 0px;
+  z-index: 2;
+  background-image:url("t3.png");
+  opacity:0;
+}
+
+.t4{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  left: 225px;
+  bottom: 0px;
+  z-index: 2;
+  background-image:url("t4.png");
+  opacity:0;
+}
+
+.copy2{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 188px;
+  height: 62px;
+  left: 56px;
+  top:128px;
+  z-index: 2;
+  background-image:url("copy2.png");
+  opacity:0;
+}
+
+
+.t5{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+  background-image:url("t5.png");
+  opacity:0;
+}
+
+.t6{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  left: 75px;
+  top: 0px;
+  z-index: 2;
+  background-image:url("t6.png");
+  opacity:0;
+}
+
+.t7{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  left: 150px;
+  top: 0px;
+  z-index: 2;
+  background-image:url("t7.png");
+  opacity:0;
+}
+
+.t8{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  left: 225px;
+  top: 0px;
+  z-index: 2;
+  /*background-image:url("t8.png");*/
+  background-color:#6d257a;
+  opacity:0;
+}
+
+.t8 img{
+  width: 52px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin:50% 50%;
+  transform: translate(-50%, -50%);
+}
+
+.t9{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  left: 0px;
+  top: 87px;
+  z-index: 2;
+  background-image:url("t9.png");
+  opacity:0;
+}
+
+.t10{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 150px;
+  height: 75px;
+  left: 75px;
+  top: 87px;
+  z-index: 2;
+  background-image:url("t10.png");
+  opacity:0;
+}
+
+.t11{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  left: 225px;
+  top: 87px;
+  z-index: 2;
+  background-image:url("t11.png");
+  opacity:0;
+}
+
+.h1{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 12px;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+  background-color:#dcdbe3;
+  opacity:0;
+}
+
+.h2{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 12px;
+  left: 75px;
+  top: 0px;
+  z-index: 2;
+  background-color:#a297ba;
+  opacity:0;
+}
+
+.h3{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 12px;
+  left: 150px;
+  top: 0px;
+  z-index: 2;
+  background-color:#ffffff;
+  opacity:0;
+}
+
+.h4{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 12px;
+  left: 225px;
+  top: 0px;
+  z-index: 2;
+  background-color:#dcdbe3;
+  opacity:0;
+}
+
+
+.f1{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 12px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 2;
+  background-color:#dcdbe3;
+  opacity:0;
+}
+
+.f2{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 12px;
+  left: 75px;
+  bottom: 0px;
+  z-index: 2;
+  background-color:#ffffff;
+  opacity:0;
+}
+
+.f3{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 12px;
+  left: 150px;
+  bottom: 0px;
+  z-index: 2;
+  background-color:#a297ba;
+  opacity:0;
+}
+
+.f4{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 75px;
+  height: 12px;
+  left: 225px;
+  bottom: 0px;
+  z-index: 2;
+  background-color:#dcdbe3;
+  opacity:0;
+}
+
+.cta{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 150px;
+  height: 75px;
+  left: 75px;
+  bottom: 12px;
+  z-index: 1;
+  background-image:url("cta.png");
+  opacity:0;
+}
+
+.footer{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 300px;
+  height: 24px;
+  left: 0px;
+  bottom: -24px;
+  z-index: 3;
+  background-color:#ffffff;
+  opacity:1;
+}
+
+.ad{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width: 252px;
+  height: 18px;
+  left: 3px;
+  top: 3px;
+  z-index: 2;
+  background-image:url("ad.png");
+  opacity:1;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="wrapper" class="wrapper">
+
+  <div id="preloader" class="preloader"></div>
+
+  <div id="main" class="main">
+    <div id="bg" class="bg"></div>
+
+    <div id="logo" class="logo"></div>
+
+    <div id="copy1" class="copy1"></div>
+
+    <div id="t1" class="t1"></div>
+    <div id="t2" class="t2"></div>
+    <div id="t3" class="t3"></div>
+    <div id="t4" class="t4"></div>
+
+    <div id="copy2" class="copy2"></div>
+
+    <div id="t5" class="t5"></div>
+    <div id="t6" class="t6"></div>
+    <div id="t7" class="t7"></div>
+    <div id="t8" class="t8">
+      <img id="pulse" src="logo.png" />
+    </div>
+
+    <div id="t9" class="t9"></div>
+    <div id="t10" class="t10"></div>
+    <div id="t11" class="t11"></div>
+
+    <div id="h1" class="h1"></div>
+    <div id="h2" class="h2"></div>
+    <div id="h3" class="h3"></div>
+    <div id="h4" class="h4"></div>
+
+    <div id="f1" class="f1"></div>
+    <div id="f2" class="f2"></div>
+    <div id="f3" class="f3"></div>
+    <div id="f4" class="f4"></div>
+
+    <div id="cta" class="cta"></div>
+  </div>
+  
+  <div id="footer" class="footer">
+    <div id="ad" class="ad"></div>
+  </div>
+
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+<script>
+  var creative = {};
+  creative.domElements = {};
+  creative.domElements.wrapper = document.getElementById('wrapper');
+  creative.domElements.preloader = document.getElementById('preloader');
+  creative.domElements.main = document.getElementById('main');
+  creative.domElements.bg = document.getElementById('bg');
+  creative.domElements.logo = document.getElementById('logo');
+  creative.domElements.copy1 = document.getElementById('copy1');
+  creative.domElements.t1 = document.getElementById('t1');
+  creative.domElements.t2 = document.getElementById('t2');
+  creative.domElements.t3 = document.getElementById('t3');
+  creative.domElements.t4 = document.getElementById('t4');
+  creative.domElements.copy2 = document.getElementById('copy2');
+  creative.domElements.t5 = document.getElementById('t5');
+  creative.domElements.t6 = document.getElementById('t6');
+  creative.domElements.t7 = document.getElementById('t7');
+  creative.domElements.t8 = document.getElementById('t8');
+  creative.domElements.t9 = document.getElementById('t9');
+  creative.domElements.t10 = document.getElementById('t10');
+  creative.domElements.t11 = document.getElementById('t11');
+  creative.domElements.h1 = document.getElementById('h1');
+  creative.domElements.h2 = document.getElementById('h2');
+  creative.domElements.h3 = document.getElementById('h3');
+  creative.domElements.h4 = document.getElementById('h4');
+  creative.domElements.f1 = document.getElementById('f1');
+  creative.domElements.f2 = document.getElementById('f2');
+  creative.domElements.f3 = document.getElementById('f3');
+  creative.domElements.f4 = document.getElementById('f4');
+  creative.domElements.cta = document.getElementById('cta');
+  creative.domElements.footer = document.getElementById('footer');
+  creative.domElements.ad = document.getElementById('ad');
+  creative.domElements.pulse = document.getElementById('pulse');
+
+
+  var loop = 0;
+  var isPlaying = false;
+  var tl = new TimelineMax({
+    onComplete:function() {
+      stop();
+    }
+  });
+
+
+    tl.to(creative.domElements.preloader, 0.5,  { ease: Linear.easeInOut, opacity: 0 }, 0.0);
+
+    tl.to(creative.domElements.logo, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 0.5);
+    tl.to(creative.domElements.copy1, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 0.5);
+
+    tl.to(creative.domElements.t1, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 0.75);
+    tl.to(creative.domElements.t2, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 1.15);
+    tl.to(creative.domElements.t3, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 1.15);
+    tl.to(creative.domElements.t4, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 0.75);
+    
+    tl.to(creative.domElements.logo, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 3.25);
+    tl.to(creative.domElements.copy1, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 3.25);
+
+    tl.to(creative.domElements.t1, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 3.0).set(creative.domElements.t1, {top:"12px", bottom:"auto"});
+    tl.to(creative.domElements.t2, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 3.4).set(creative.domElements.t2, {top:"12px", bottom:"auto"});
+    tl.to(creative.domElements.t3, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 3.0).set(creative.domElements.t3, {top:"12px", bottom:"auto"});
+    tl.to(creative.domElements.t4, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 3.4).set(creative.domElements.t4, {top:"12px", bottom:"auto"});
+
+    tl.to(creative.domElements.copy2, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 3.8);
+
+    tl.to(creative.domElements.t5, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 3.8);
+    tl.to(creative.domElements.t6, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 4.2);
+    tl.to(creative.domElements.t7, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 3.8);
+    tl.to(creative.domElements.t8, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 4.2);
+
+    tl.to(creative.domElements.copy2, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 6.70);
+
+    tl.to(creative.domElements.t5, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 6.70).set(creative.domElements.t5, {bottom:"12px", top:"auto"});
+    tl.to(creative.domElements.t6, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 7.10).set(creative.domElements.t6, {bottom:"12px", top:"auto"});
+    tl.to(creative.domElements.t7, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 7.10).set(creative.domElements.t7, {bottom:"12px", top:"auto"});
+    tl.to(creative.domElements.t8, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 6.70).set(creative.domElements.t8, {bottom:"12px", top:"auto"});
+
+    tl.to(creative.domElements.h1, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 7.5);
+    tl.to(creative.domElements.t1, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 7.5);
+    tl.to(creative.domElements.t9, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 7.5);
+    tl.to(creative.domElements.t7, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 7.5);
+    tl.to(creative.domElements.t8, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 7.5);
+
+    tl.to(creative.domElements.f3, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 7.95);
+    tl.to(creative.domElements.f4, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 7.95);
+    tl.to(creative.domElements.t5, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 7.95);
+    tl.to(creative.domElements.t6, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 7.95);
+
+    tl.to(creative.domElements.f1, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 8.4);
+    tl.to(creative.domElements.f2, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 8.4);
+    tl.to(creative.domElements.h3, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 8.4);
+    tl.to(creative.domElements.h4, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 8.4);
+    tl.to(creative.domElements.h2, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 8.4);
+    tl.to(creative.domElements.t2, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 8.4);
+
+    tl.to(creative.domElements.t3, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 8.85);
+    tl.to(creative.domElements.t4, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 8.85);
+    tl.to(creative.domElements.t11, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 8.85);
+
+    tl.to(creative.domElements.t10, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 9.25);
+
+    tl.to(creative.domElements.t6, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 12.0);
+    tl.to(creative.domElements.t7, 0.25, { ease: Sine.easeInOut, opacity: 0, force3D:false }, 12.0);
+
+    tl.to(creative.domElements.cta, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 12.25);
+    tl.to(creative.domElements.main, 0.25, { ease: Sine.easeInOut, y: -12, force3D:false }, 13.0);
+    tl.to(creative.domElements.footer, 0.25, { ease: Sine.easeInOut, y: -24, force3D:false }, 13.0);
+
+    tl.to(creative.domElements.pulse, 0.15, { ease: Power1.easeIn, scale:1.05, force3D:true, z:0.001}, 14.0);
+    tl.to(creative.domElements.pulse, 0.15, { ease: Power1.easeIn, scale:1.0, force3D:true, z:0.001}, 14.15);
+    tl.to(creative.domElements.pulse, 0.15, { ease: Power1.easeIn, scale:1.05, force3D:true, z:0.001}, 14.7);
+    tl.to(creative.domElements.pulse, 0.15, { ease: Power1.easeIn, scale:1.0, force3D:true, z:0.001}, 14.85);
+    tl.to(creative.domElements.pulse, 0.15, { ease: Power1.easeIn, scale:1.05, force3D:true, z:0.001}, 15.4);
+    tl.to(creative.domElements.pulse, 0.15, { ease: Power1.easeIn, scale:1.0, force3D:true, z:0.001}, 15.55);
+
+    function play() {
+      console.log("play")
+      tl.seek(0);
+      tl.play()
+    }
+
+    function stop() {
+      console.log("play")
+      tl.seek(tl.duration());
+      tl.pause();
+    }
+
+    function togglePlayback(){
+      if(isPlaying){
+        stop();
+        isPlaying = false;
+      }
+      else{
+        play();
+        isPlaying = true;
+      }
+    }
+
+    window.onload = function() {
+      document.getElementById("wrapper").addEventListener("click", togglePlayback, !1);
+      tl.seek(tl.duration());
+      tl.pause();
+    }
+    
+</script>
+
+</body>
+</html>

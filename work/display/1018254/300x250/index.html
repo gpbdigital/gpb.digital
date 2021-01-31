@@ -1,0 +1,364 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8>
+<meta name="ad.size” content=”width=300,height=250">
+<script>
+var clickTag = "http://www.google.com"; 
+</script>
+<style>
+
+
+* {
+  border:0;
+  margin:0;
+  padding:0;
+  background-repeat:no-repeat;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+
+}
+
+.wrapper {
+  position: relative;
+  margin:0 auto;
+  width: 298px;
+  height: 248px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #b2b2b2;
+}
+
+.preloader{
+  position: absolute;
+  width:300px;
+  height:250px;
+  left: 0px;
+  top: 0px;
+  background-color:#fff;
+  z-index:20;
+}
+
+.bg{
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width:300px;
+  height:250px;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-image:url("bg.jpg");
+}
+
+.buildings{
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width:252px;
+  height:120px;
+  left: 36px;
+  top: 102px;
+  z-index: 2;
+  background-image:url("buildings.png");
+}
+
+.family{
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width:280px;
+  height:234px;
+  left: -20px;
+  top: 69px;
+  z-index: 5;
+  background-image:url("family.png");
+  opacity:0;
+}
+
+.heartland{
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width:271px;
+  height:266px;
+  left: 17px;
+  top: 107px;
+  z-index: 2;
+  background-image:url("heartland.png");
+}
+
+.phone{
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 54px;
+  height: 106px;
+  left: 100px;
+  top: 3px;
+  z-index: 3;
+  background-image:url("phone.png");
+  opacity:0;
+}
+
+.bush{
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width:72px;
+  height:77px;
+  left: 93px;
+  top: 62px;
+  z-index: 4;
+  background-image:url("bush.png");
+}
+
+.logo{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width:73px;
+  height:63px;
+  left:217px;
+  top:176px;
+  z-index:10;
+  background-image:url("logo.png");
+}
+
+.flag{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width:248px;
+  height:65px;
+  left:25px;
+  top:-65px;
+  z-index:6;
+  background-image:url("flag.png");
+}
+
+.copy1{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width:209px;
+  height:33px;
+  left:46px;
+  top:10px;
+  z-index:6;
+  background-image:url("copy1.png");
+  opacity:0;
+}
+
+.copy2{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width:116px;
+  height:33px;
+  left:92px;
+  top:10px;
+  z-index:6;
+  background-image:url("copy2.png");
+  opacity:0;
+}
+
+.copy3{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width:192px;
+  height:16px;
+  left:54px;
+  top:21px;
+  z-index:6;
+  background-image:url("copy3.png");
+  opacity:0;
+}
+
+.copy4{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width:194px;
+  height:16px;
+  left:53px;
+  top:21px;
+  z-index:6;
+  background-image:url("copy4.png");
+  opacity:0;
+}
+
+.overlay{
+  background-size:contain;
+  position: absolute;
+  overflow: hidden;
+  width:300px;
+  height:250px;
+  background:#000000;
+  opacity:0;
+  z-index:5;
+}
+
+.cta{
+  position: absolute;
+  overflow: hidden;
+  background-size:contain;
+  width: 137px;
+  height: 32px;
+  z-index:6;
+  left: 80px;
+  top: 69px;
+  opacity:0;
+  -webkit-backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+}
+
+.cta img{
+  width:100%;
+  -webkit-backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+}
+
+.tcs{
+  background-size:contain;
+  position: absolute;
+  width:217px;
+  height:44px;
+  left: 5px;
+  top: 205px;
+  z-index:6;
+  background-image:url("tcs.png");
+  opacity:1;
+}
+
+</style>
+</head>
+<body>
+
+<div id="wrapper" class="wrapper">
+
+  <div id="preloader" class="preloader"></div>
+  <div id="bg" class="bg"></div>
+  <div id="buildings" class="buildings"></div>
+  <div id="family" class="family"></div>
+  <div id="heartland" class="heartland">
+    <div id="phone" class="phone"></div>
+    <div id="bush" class="bush"></div>
+  </div>
+  <div id="logo" class="logo"></div>
+  <div id="flag" class="flag"></div>
+  <div id="overlay" class="overlay"></div>
+  <div id="copy1" class="copy1"></div>
+  <div id="copy2" class="copy2"></div>
+  <div id="copy3" class="copy3"></div>
+  <div id="copy4" class="copy4"></div>
+  <div id="copy5" class="copy5"></div>
+  <div id="copy6" class="copy6"></div>
+  <div id="cta" class="cta">
+    <img src="cta.png" />
+  </div>
+  <div id="tcs" class="tcs"></div>
+
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+<script>
+  var creative = {};
+  creative.domElements = {};
+  creative.domElements.wrapper = document.getElementById('wrapper');
+  creative.domElements.preloader = document.getElementById('preloader');
+  creative.domElements.bg = document.getElementById('bg');
+  creative.domElements.buildings = document.getElementById('buildings');
+  creative.domElements.phone = document.getElementById('phone');
+  creative.domElements.family = document.getElementById('family');
+  creative.domElements.heartland = document.getElementById('heartland');
+  creative.domElements.bush = document.getElementById('bush');
+  creative.domElements.logo = document.getElementById('logo');
+  creative.domElements.flag = document.getElementById('flag');
+  creative.domElements.overlay = document.getElementById('overlay');
+  creative.domElements.copy1 = document.getElementById('copy1');
+  creative.domElements.copy2 = document.getElementById('copy2');
+  creative.domElements.copy3 = document.getElementById('copy3');
+  creative.domElements.copy4 = document.getElementById('copy4');
+  creative.domElements.copy5 = document.getElementById('copy5');
+  creative.domElements.copy6 = document.getElementById('copy6');
+  creative.domElements.cta = document.getElementById('cta');
+  creative.domElements.tcs = document.getElementById('tcs');
+
+
+  var loop = 0;
+  var isPlaying = false;
+  var tl = new TimelineMax({
+    onComplete:function() {
+      stop();
+    }
+  });
+
+    tl.to(creative.domElements.preloader, 0.5,  { ease: Linear.easeInOut, opacity: 0 }, 0.0);
+
+    tl.to(creative.domElements.flag, 0.25, { ease: Sine.easeInOut, y: +65, force3D:false }, 0.5);
+    tl.to(creative.domElements.copy1, 0.25, { ease: Sine.easeInOut, opacity: 1, force3D:false }, 0.75);
+    tl.to(creative.domElements.cta, 0.25, { ease: Sine.easeInOut, opacity:1, force3D:false }, 1.0);
+
+    tl.to(creative.domElements.buildings, 0.25, { ease: Sine.easeInOut, opacity:0, force3D:false }, 4.0);
+    tl.to(creative.domElements.copy1, 0.25, { ease: Sine.easeInOut, opacity:0, force3D:false }, 4.0);
+
+    tl.to(creative.domElements.phone, 0.25, { ease: Sine.easeInOut, opacity:1, force3D:false }, 4.25);
+    tl.to(creative.domElements.copy2, 0.25, { ease: Sine.easeInOut, opacity:1, force3D:false }, 4.25);
+
+    tl.to(creative.domElements.phone, 0.25, { ease: Sine.easeInOut, opacity:0, force3D:false }, 7.0);
+    tl.to(creative.domElements.bush, 0.25, { ease: Sine.easeInOut, opacity:0, force3D:false }, 7.0);
+    tl.to(creative.domElements.copy2, 0.25, { ease: Sine.easeInOut, opacity:0, force3D:false }, 7.0);
+
+    tl.to(creative.domElements.copy3, 0.25, { ease: Sine.easeInOut, opacity:1, force3D:false }, 7.5);
+    tl.to(creative.domElements.heartland, 0.25, { ease: Sine.easeInOut, scale:1.15, x:+5, y:-40, force3D:false }, 7.5);
+    tl.to(creative.domElements.family, 0.25, { ease: Sine.easeInOut, opacity:1, force3D:false }, 7.75);
+
+    tl.to(creative.domElements.copy3, 0.25, { ease: Sine.easeInOut, opacity:0, force3D:false }, 10.0);
+
+    tl.to(creative.domElements.overlay, 0.25, { ease: Sine.easeInOut, opacity:0.5, force3D:false }, 10.5);
+
+    tl.to(creative.domElements.copy4, 0.25, { ease: Sine.easeInOut, opacity:1, force3D:false }, 10.5);
+
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.05, force3D:true, z:0.001}, 12.0);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.0, force3D:true, z:0.001}, 12.15);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.05, force3D:true, z:0.001}, 12.7);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.0, force3D:true, z:0.001}, 12.85);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.05, force3D:true, z:0.001}, 13.4);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.0, force3D:true, z:0.001}, 13.55);
+
+    function play() {
+      console.log("play")
+      tl.seek(0);
+      tl.play()
+    }
+
+    function stop() {
+      console.log("play")
+      tl.seek(tl.duration());
+      tl.pause();
+    }
+
+    function togglePlayback(){
+      if(isPlaying){
+        stop();
+        isPlaying = false;
+      }
+      else{
+        play();
+        isPlaying = true;
+      }
+    }
+
+    window.onload = function() {
+      document.getElementById("wrapper").addEventListener("click", togglePlayback, !1);
+      tl.seek(tl.duration());
+      tl.pause();
+    }
+</script>
+
+</body>
+</html>

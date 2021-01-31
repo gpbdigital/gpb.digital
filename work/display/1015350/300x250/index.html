@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8>
+<meta name="ad.size” content=”width=300,height=250">
+<script>
+var clickTag = "http://www.google.com"; 
+</script>
+<style>
+* {
+  border:0;
+  margin:0;
+  padding:0;
+  background-repeat:no-repeat;
+
+}
+
+.wrapper {
+  position: relative;
+  margin:0 auto;
+  width: 298px;
+  height: 248px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #b2b2b2;
+  background-color:#000;
+}
+
+.preloader{
+  position: absolute;
+  width:300px;
+  height:250px;
+  left: 0px;
+  top: 0px;
+  background-color:#000;
+  z-index:11;
+  opacity:1;
+}
+
+.fan{
+  position: absolute;
+  width:198px;
+  height:227px;
+  overflow:hidden;
+  background-image:url(fan.png);
+  z-index:9;
+  left: 51px;
+  bottom: 0px;
+}
+
+.footer{
+  position: absolute;
+  width:300px;
+  height:72px;
+  background-color:#000;
+  opacity:1;
+  left:0px;
+  bottom:-72px;
+  z-index:10;
+}
+
+.logo{
+  position: absolute;
+  width:86px;
+  height:32px;
+  overflow:hidden;
+  background-image:url(logo.png);
+  z-index:11;
+  right: 15px;
+  bottom: 15px;
+  opacity:1;
+}
+
+.copy1{
+  position: absolute;
+  width:130px;
+  height:37px;
+  overflow:hidden;
+  background-image:url(copy1.png);
+  z-index:10;
+  left: 20px;
+  top: 195px;
+  opacity:0;
+}
+
+.copy2{
+  position: absolute;
+  width:91px;
+  height:40px;
+  overflow:hidden;
+  background-image:url(copy2.png);
+  z-index:10;
+  left: 20px;
+  top: 195px;
+  opacity:0;
+}
+
+.copy3{
+  position: absolute;
+  width:177px;
+  height:35px;
+  overflow:hidden;
+  background-image:url(copy3.png);
+  z-index:10;
+  left: 15px;
+  top: 200px;
+  opacity:0;
+}
+
+.anim{
+  width:300px;
+  height:250px;
+  position: absolute;
+}
+
+#f0 {
+  background-image:url('bg_0000.jpg');
+  z-index:1;
+}
+
+#f1{
+  background-image:url('bg_0001.jpg');
+  z-index:2;
+}
+
+#f2{
+  background-image:url('bg_0002.jpg');
+  z-index:3;
+}
+
+#f3{
+  background-image:url('bg_0003.jpg');
+  z-index:4;
+}
+
+#f4{
+  background-image:url('bg_0004.jpg');
+  z-index:5;
+}
+
+#f5{
+  background-image:url('bg_0005.jpg');
+  z-index:6;
+}
+
+#f6{
+  background-image:url('bg_0006.jpg');
+  z-index:7;
+}
+
+#f7{
+  background-image:url('bg_0007.jpg');
+  z-index:8;
+}
+
+#f7.fade {
+  opacity: 1;
+}
+
+</style>
+</head>
+<body>
+
+<div id="wrapper" class="wrapper">
+
+  <div id="preloader" class="preloader"></div>
+  <div id="fan" class="fan"></div>
+  <div id="footer" class="footer">
+    <div id="logo" class="logo"></div>
+  </div>
+  <div id="copy1" class="copy1"></div>
+  <div id="copy2" class="copy2"></div>
+  <div id="copy3" class="copy3"></div>
+
+  <div id="f0" class="anim"></div>
+  <div id="f1" class="anim"></div>
+  <div id="f2" class="anim"></div>
+  <div id="f3" class="anim"></div>
+  <div id="f4" class="anim"></div>
+  <div id="f5" class="anim"></div>
+  <div id="f6" class="anim"></div>
+  <div id="f7" class="anim"></div>
+
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+<script>
+  var creative = {};
+  creative.domElements = {};
+  creative.domElements.wrapper = document.getElementById('wrapper');
+  creative.domElements.preloader = document.getElementById('preloader');
+  creative.domElements.fan = document.getElementById('fan');
+  creative.domElements.footer = document.getElementById('footer');
+  creative.domElements.logo = document.getElementById('logo');
+  creative.domElements.copy1 = document.getElementById('copy1');
+  creative.domElements.copy2 = document.getElementById('copy2');
+  creative.domElements.copy3 = document.getElementById('copy3');
+  var interval;
+  var loop = 0;
+  var isPlaying = false;
+  var tl = new TimelineMax({
+    onComplete:function() {
+      stop();
+    }
+  });
+
+  tl.to(creative.domElements.preloader, 0.5,  { ease: Linear.easeInOut, opacity: 0 }, 0.25);
+  tl.to(creative.domElements.footer, 0.5,  { ease: Power2.easeInOut, opacity: 1, bottom: -1 }, 1.0);
+  //tl.to(creative.domElements.copy1, 0.5,  { ease: Linear.easeInOut, opacity: 1 }, 1.5);
+  tl.to(creative.domElements.copy1, 0.5,  {opacity:1, ease:RoughEase.ease.config({points:50, strength:2, clamp:true})}, 2.0);
+  //tl.to(creative.domElements.copy1, 0.5,  { ease: Linear.easeInOut, opacity: 0 }, 4.5);
+  tl.to(creative.domElements.copy1, 0.5,  {opacity:0, ease:RoughEase.ease.config({points:50, strength:2, clamp:true})}, 5.0);
+  //tl.to(creative.domElements.copy2, 0.5,  { ease: Linear.easeInOut, opacity: 1 }, 5.0);
+  tl.to(creative.domElements.copy2, 0.5,  {opacity:1, ease:RoughEase.ease.config({points:50, strength:2, clamp:true})}, 6.0);
+  //tl.to(creative.domElements.copy2, 0.5,  { ease: Linear.easeInOut, opacity: 0 }, 8.0);
+  tl.to(creative.domElements.copy2, 0.5,  {opacity:0, ease:RoughEase.ease.config({points:50, strength:2, clamp:true})}, 9.0);
+  //tl.to(creative.domElements.copy3, 0.5,  { ease: Linear.easeInOut, opacity: 1 }, 8.5);
+  tl.to(creative.domElements.copy3, 0.5,  {opacity:1, ease:RoughEase.ease.config({points:50, strength:2, clamp:true})}, 10.0);
+    
+  function startAnim(){
+
+    var i = 0;
+
+    for (x = 1; x < 7; x++) { 
+        document.getElementById("f"+x).style.display = "none";
+    }
+    
+    interval = setInterval(function(){ 
+
+      document.getElementById("f"+i).style.display = "block";
+
+      
+      i++;
+
+      if(i > 7){
+
+        clearInterval(interval);
+        reverseAnim();
+      
+      }
+
+    }, 70);
+
+  }
+
+  function reverseAnim(){
+
+    var i = 7;
+
+    interval = setInterval(function(){ 
+
+      document.getElementById("f"+i).style.display = "none";
+
+      i--;
+
+      if(i == 0){
+
+        clearInterval(interval);
+        startAnim();
+      }
+
+    }, 70);
+
+  }
+
+  function play() {
+      startAnim();
+      console.log("play")
+      tl.seek(0);
+      tl.play()
+    }
+
+    function stop() {
+      console.log("play")
+      tl.seek(tl.duration());
+      tl.pause();
+    }
+
+    function togglePlayback(){
+      if(isPlaying){
+        stop();
+        isPlaying = false;
+      }
+      else{
+        play();
+        isPlaying = true;
+      }
+    }
+
+    window.onload = function() {
+      document.getElementById("wrapper").addEventListener("click", togglePlayback, !1);
+      tl.seek(tl.duration());
+      tl.pause();
+    }
+
+</script>
+
+</body>
+</html>

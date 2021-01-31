@@ -1,0 +1,361 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8>
+<meta name="ad.size” content=”width=300,height=250">
+<script>
+var clickTag = "http://www.google.com"; 
+</script>
+<style>
+
+
+* {
+  border:0;
+  margin:0;
+  padding:0;
+  background-repeat:no-repeat;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+
+}
+
+.wrapper {
+  position: relative;
+  margin:0 auto;
+  width: 298px;
+  height: 248px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #b2b2b2;
+}
+
+.preloader{
+  position: absolute;
+  width:300px;
+  height:250px;
+  left: 0px;
+  top: 0px;
+  background-color:#fff;
+  z-index:7;
+}
+
+.bg{
+    background-size: contain;
+    position: absolute;
+    overflow: hidden;
+    width: 600px;
+    height: 300px;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    background-image:url("bg.jpg");
+     -webkit-backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+}
+
+.logo{
+    background-size:contain;
+    position: absolute;
+    overflow: hidden;
+    width:62px;
+    height:47px;
+    left: 230px;
+    top: 193px;
+    z-index:3;
+    background-image:url("logo.png");
+}
+
+.copy1Container{
+    background-size:contain;
+    position: absolute;
+    overflow: hidden;
+    width: 300px;
+    height: 87.5px;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    opacity:1;
+}
+
+.tail1{
+    background-size:contain;
+    position: absolute;
+    overflow: hidden;
+    width: 38px;
+    height: 5px;
+    left: 0;
+    top: 12px;
+    z-index: 3;
+    background-image:url("tail1.png");
+    opacity:1;
+}
+.copy1{
+    background-size: contain;
+    position: absolute;
+    overflow: hidden;
+    width: 200px;
+    height: 39px;
+    left: 19px;
+    top: 30px;
+    z-index: 3;
+    background-image:url("copy1.png");
+    opacity:1;
+}
+
+
+.copy2Container{
+    background-size:contain;
+    position: absolute;
+    overflow: hidden;
+    width: 300px;
+    height: 87.5px;
+    left: 300px;
+    bottom: 0;
+    z-index: 3;
+    opacity:1;
+}
+
+.tail2{
+    background-size:contain;
+    position: absolute;
+    overflow: hidden;
+    width: 38px;
+    height: 5px;
+    left: 0;
+    top: 12px;
+    z-index: 3;
+    background-image:url("tail1.png");
+    opacity:1;
+}
+
+.copy2{
+    background-size:contain;
+    position: absolute;
+    width: 196px;
+    height: 39px;
+    left: 19px;
+    top: 30px;
+    z-index: 3;
+    background-image:url("copy2.png");
+    opacity:1;
+}
+
+.bg2{
+    background-size: contain;
+    position: absolute;
+    overflow: hidden;
+    width: 300px;
+    height: 250px;
+    left: 0px;
+    top: 250px;
+    z-index: 4;
+    background:#fff;
+}
+
+.bg2Header{
+    background-size: contain;
+    position: absolute;
+    overflow: hidden;
+    width: 300px;
+    height: 20px;
+    left: 0px;
+    top: 0;
+    z-index: 1;
+    background:#f5a992;
+}
+
+.logo2{
+    position: absolute;
+    overflow: hidden;
+    background-size:contain;
+    width:62px;
+    height:48px;
+    z-index: 5;
+    left: 231px;
+    top: 193px;
+    opacity:0;
+    -webkit-backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    transform-origin: 0% 0%;
+}
+
+.logo2 img{
+  width:100%;
+  -webkit-backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+}
+
+.copy3{
+    background-size:contain;
+    position: absolute;
+    width: 281px;
+    height: 52px;
+    left: 10px;
+    top: 99px;
+    z-index: 5;
+    background-image:url("copy3.png");
+    opacity:0;
+}
+
+.copy4{
+    background-size:contain;
+    position: absolute;
+    width: 197px;
+    height: 149px;
+    left: 52px;
+    top: 52px;
+    z-index: 5;
+    background-image:url("copy4.png");
+    opacity:0;
+}
+
+.cta{
+    position: absolute;
+    overflow: hidden;
+    background-size:contain;
+    width:204px;
+    height:42px;
+    z-index: 5;
+    left: 50px;
+    top: 70px;
+    opacity:0;
+    -webkit-backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */ 
+}
+
+.cta img{
+  width:100%;
+  -webkit-backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="wrapper" class="wrapper">
+
+  <div id="preloader" class="preloader"></div>
+  <div id="bg" class="bg"></div>
+  <div id="logo" class="logo"></div>
+  <div id="copy1Container" class="copy1Container">
+    <div id="tail1" class="tail1"></div>
+    <div id="copy1" class="copy1"></div>
+  </div>
+  <div id="copy2Container" class="copy2Container">
+    <div id="tail2" class="tail2"></div>
+    <div id="copy2" class="copy2"></div>
+  </div>
+  <div id="bg2" class="bg2">
+    <div id="bg2Header" class="bg2Header"></div>
+  </div>
+  <div id="logo2" class="logo2">
+    <img src="logo2.png" />
+  </div>
+  <div id="copy3" class="copy3"></div>
+  <div id="copy4" class="copy4"></div>
+  <div id="cta" class="cta">
+    <img src="cta.png" />
+  </div>
+
+
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+<script>
+  var creative = {};
+  creative.domElements = {};
+  creative.domElements.wrapper = document.getElementById('wrapper');
+  creative.domElements.preloader = document.getElementById('preloader');
+  creative.domElements.bg = document.getElementById('bg');
+  creative.domElements.logo = document.getElementById('logo');
+  creative.domElements.copy1Container = document.getElementById('copy1Container');
+  creative.domElements.tail1 = document.getElementById('tail1');
+  creative.domElements.copy1 = document.getElementById('copy1');
+  creative.domElements.copy2Container = document.getElementById('copy2Container');
+  creative.domElements.tail2 = document.getElementById('tail2');
+  creative.domElements.copy2 = document.getElementById('copy2');
+  creative.domElements.bg2 = document.getElementById('bg2');
+  creative.domElements.bg2Header = document.getElementById('bg2Header');
+  creative.domElements.logo2 = document.getElementById('logo2');
+  creative.domElements.copy3 = document.getElementById('copy3');
+  creative.domElements.copy4 = document.getElementById('copy4');
+  creative.domElements.cta = document.getElementById('cta');
+
+
+  var loop = 0;
+  var isPlaying = false;
+  var tl = new TimelineMax({
+    onComplete:function() {
+      stop();
+    }
+  });
+    
+    tl.to(creative.domElements.preloader, 0.5,  { ease: Linear.easeInOut, opacity: 0 }, 0.0);
+
+    tl.to(creative.domElements.logo, 0.15, { ease: Sine.easeInOut, opacity:0, force3D:false }, 3.25);
+    tl.to(creative.domElements.bg, 0.35, { ease: Sine.easeInOut, x: -300, force3D:false }, 3.5);
+    tl.to(creative.domElements.copy1Container, 0.35, { ease: Sine.easeInOut, x: -300, force3D:false }, 3.5);
+    tl.to(creative.domElements.copy2Container, 0.35, { ease: Sine.easeInOut, x: -300, force3D:false }, 3.5);
+    tl.to(creative.domElements.logo, 0.15, { ease: Sine.easeInOut, opacity:1, force3D:false }, 3.9);
+
+    tl.to(creative.domElements.copy2Container, 0.25, { ease: Sine.easeInOut, opacity:0, force3D:false }, 7.5);
+    tl.to(creative.domElements.logo, 0.25, { ease: Sine.easeInOut, opacity:0, force3D:false }, 7.5);
+
+    tl.to(creative.domElements.bg, 0.45, { ease: Sine.easeInOut, y:-250, force3D:false }, 7.75);
+    tl.to(creative.domElements.bg2, 0.45, { ease: Sine.easeInOut, y:-250, force3D:false }, 7.75);
+
+    tl.to(creative.domElements.logo2, 0.25, { ease: Sine.easeInOut, opacity:1, force3D:false }, 8.2);
+    tl.to(creative.domElements.copy3, 0.25, { ease: Sine.easeInOut, opacity:1, force3D:false }, 8.2);
+
+    tl.to(creative.domElements.copy3, 0.25, { ease: Sine.easeInOut, opacity:0, force3D:false }, 11.0);
+    tl.to(creative.domElements.copy4, 0.25, { ease: Sine.easeInOut, opacity:1, force3D:false }, 11.25);
+
+    tl.to(creative.domElements.copy4, 0.25, { ease: Sine.easeInOut, opacity:0, force3D:false }, 15.0);
+    tl.to(creative.domElements.logo2, 0.25, { ease: Sine.easeInOut, scale:2, x:-139, y:-59, force3D:false }, 15.25);
+
+
+    tl.to(creative.domElements.cta, 0.25, { ease: Sine.easeInOut, opacity:1, force3D:false }, 15.5);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.05, force3D:true, z:0.001}, 17.0);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.0, force3D:true, z:0.001}, 17.15);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.05, force3D:true, z:0.001}, 17.7);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.0, force3D:true, z:0.001}, 17.85);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.05, force3D:true, z:0.001}, 18.4);
+    tl.to(creative.domElements.cta, 0.15, { ease: Power1.easeIn, scale:1.0, force3D:true, z:0.001}, 18.55);
+
+    function play() {
+      console.log("play")
+      tl.seek(0);
+      tl.play()
+    }
+
+    function stop() {
+      console.log("play")
+      tl.seek(tl.duration());
+      tl.pause();
+    }
+
+    function togglePlayback(){
+      if(isPlaying){
+        stop();
+        isPlaying = false;
+      }
+      else{
+        play();
+        isPlaying = true;
+      }
+    }
+
+    window.onload = function() {
+      document.getElementById("wrapper").addEventListener("click", togglePlayback, !1);
+      tl.seek(tl.duration());
+      tl.pause();
+    }
+    
+</script>
+
+</body>
+</html>

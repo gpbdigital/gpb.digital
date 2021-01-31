@@ -1,0 +1,276 @@
+.coin2{
+  position: absolute;
+  overflow: hidden;
+  width:300px;
+  height:250px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  background-image:url("coin2.jpg");
+  background-size:contain;
+  opacity:0;
+}
+
+.coin3{
+  position: absolute;
+  overflow: hidden;
+  width:300px;
+  height:250px;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  background-image:url("coin3.jpg");
+  background-size:contain;
+  opacity:0;
+}
+
+.coin4{
+  position: absolute;
+  overflow: hidden;
+  width:300px;
+  height:250px;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  background-image:url("coin4.jpg");
+  background-size:contain;
+  opacity:0;
+}
+
+.coin5{
+  position: absolute;
+  overflow: hidden;
+  width:300px;
+  height:250px;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  background-image:url("coin5.jpg");
+  background-size:contain;
+  opacity:0;
+}
+
+.coin6{
+  position: absolute;
+  overflow: hidden;
+  width:300px;
+  height:250px;
+  z-index: 6;
+  left: 0;
+  top: 0;
+  background-image:url("coin6.jpg");
+  background-size:contain;
+  opacity:0;
+}
+
+.coin7{
+  position: absolute;
+  overflow: hidden;
+  width:300px;
+  height:250px;
+  z-index: 7;
+  left: 0;
+  top: 0;
+  background-image:url("coin7.jpg");
+  background-size:contain;
+  opacity:0;
+}
+
+.coin8{
+  position: absolute;
+  overflow: hidden;
+  width:300px;
+  height:250px;
+  z-index: 8;
+  left: 0;
+  top: 0;
+  background-image:url("coin8.jpg");
+  background-size:contain;
+  opacity:0;
+}
+
+.coin9{
+  position: absolute;
+  overflow: hidden;
+  width:300px;
+  height:250px;
+  z-index: 9;
+  left: 0;
+  top: 0;
+  background-image:url("coin9.jpg");
+  background-size:contain;
+  opacity:0;
+}
+
+.copy1{
+    position: absolute;
+    overflow: hidden;
+    width:131px;
+    height:84px;
+    z-index:3;
+    left:19px;
+    top: 65px;
+}
+
+.line1C{
+    position: absolute;
+    overflow: hidden;
+    width: 111px;
+    height: 16px;
+    z-index:3;
+    left:0px;
+    top: 0px;
+}
+
+.line1{
+    position: absolute;
+    overflow: hidden;
+    width:111px;
+    height:16px;
+    z-index:3;
+    left:0;
+    top: 16px;
+    background-image:url("line1.png");
+    background-size:contain;
+}
+
+.line2C{
+    position: absolute;
+    overflow: hidden;
+    width: 115px;
+    height: 19px;
+    z-index:3;
+    left:0;
+    top: 22px;
+}
+
+.line2{
+    position: absolute;
+    overflow: hidden;
+    width:115px;
+    height:19px;
+    z-index:4;
+    left:0;
+    top: 19px;
+    background-image:url("line2.png");
+    background-size:contain;
+}
+
+.line3C{
+    position: absolute;
+    overflow: hidden;
+    width:119px;
+    height:15px;
+    z-index:3;
+    left:0;
+    top: 43px;
+}
+
+.line3{
+    position: absolute;
+    overflow: hidden;
+    width:119px;
+    height:15px;
+    z-index:4;
+    left:0;
+    top: 15px;
+    background-image:url("line3.png");
+    background-size:contain;
+}
+
+.line4C{
+    position: absolute;
+    overflow: hidden;
+    width:130px;
+    height:19px;
+    z-index:3;
+    left:0;
+    top: 65px;
+}
+
+.line4{
+    position: absolute;
+    overflow: hidden;
+    width:130px;
+    height:19px;
+    z-index:4;
+    left:0;
+    top: 19px;
+    background-image:url("line4.png");
+    background-size:contain;
+}
+
+.copy2{
+    position: absolute;
+    overflow: hidden;
+    width:107px;
+    height:58px;
+    z-index:4;
+    left:20px;
+    top: 75px;
+    background-image:url("copy2.png");
+    background-size:contain;
+    opacity:0;
+}
+
+.copy3{
+    position: absolute;
+    overflow: hidden;
+    width:143px;
+    height:62px;
+    z-index:4;
+    left:20px;
+    top: 75px;
+    background-image:url("copy3.png");
+    background-size:contain;
+    opacity:0;
+}
+
+.taglineC{
+    position: absolute;
+    overflow: hidden;
+    width:130px;
+    height:9px;
+    z-index:4;
+    left:57px;
+    top: 186px;
+}
+
+.tagline{
+    position: absolute;
+    overflow: hidden;
+    width:130px;
+    height:9px;
+    z-index:4;
+    left:-130px;
+    top: 0;
+    background-image:url("tagline.png");
+    background-size:contain;
+    opacity:0;
+}
+
+.tcs{
+    position: absolute;
+    overflow: hidden;
+    width:259px;
+    height:9px;
+    z-index:4;
+    left:20px;
+    top: 223px;
+    background-image:url("tcs.png");
+    background-size:contain;
+    opacity:0;
+}
+
+.cta{
+    position: absolute;
+    overflow: hidden;
+    width:155px;
+    height:28px;
+    z-index:4;
+    left:20px;
+    top: 94px;
+    background-image:url("cta.png");
+    background-size:contain;
+    opacity:0;
+}

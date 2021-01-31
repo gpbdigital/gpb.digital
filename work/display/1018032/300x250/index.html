@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="ad.size” content=”width=300,height=250">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+  <script language="javascript">
+    var clickTag = "http://www.google.com";
+    window.onload = function () {
+      politeInit();
+    };
+    
+    function politeInit() {
+      var extCSS = document.createElement('link');
+      extCSS.setAttribute("rel", "stylesheet");
+      extCSS.setAttribute("type", "text/css");
+      extCSS.setAttribute("href", "styles.css");
+      document.getElementsByTagName("head")[0].appendChild(extCSS);
+      var scriptJS = document.createElement('script');
+      scriptJS.setAttribute('type', 'text/javascript');
+      scriptJS.setAttribute('src', 'script.js');
+      document.getElementsByTagName('head')[0].appendChild(scriptJS);
+    }
+  </script>
+  <style>
+    * {
+      border:0;
+      margin:0;
+      padding:0;
+      background-repeat:no-repeat;
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
+    }
+
+
+    .preloader{
+      position: absolute;
+      width:300px;
+      height:250px;
+      left: 0px;
+      top: 0px;
+      background-color:#fff;
+      z-index:7;
+    }
+    
+    
+    .wrapper {
+      position: relative;
+      margin:0 auto;
+      width: 298px;
+      height: 248px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid #b2b2b2;
+    }
+    
+    .bg1{
+      background-size: contain;
+      position: absolute;
+      overflow: hidden;
+      width: 300px;
+      height: 250px;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      background-image:url("bg1.jpg");
+    }
+    
+    .logo{
+        background-size:contain;
+        position: absolute;
+        overflow: hidden;
+        width:113px;
+        height:38px;
+        left:180px;
+        top:8px;
+        z-index:12;
+        background-image:url("logo.png");
+    }
+
+    .cta{
+      display:none;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="wrapper" class="wrapper">
+    <div id="preloader" class="preloader"></div>
+    <div id="bg1" class="bg1"></div>
+    <div id="bg2" class="bg2"></div>
+    <div id="bg3" class="bg3">
+      <div id="copy1" class="copy1"></div>
+    </div>
+    <div id="bg4" class="bg4">
+      <div id="copy2" class="copy2"></div>
+      <div id="tcs1" class="tcs1"></div>s
+      <div id="copy3" class="copy3"></div>
+      <div id="tuesday" class="tuesday"></div>
+      <div id="wednesday" class="wednesday"></div>
+    </div>
+    <div id="bg5" class="bg5"></div>
+    <div id="orange" class="orange"></div>
+    <div id="bonus" class="bonus"></div>
+    <div id="blueContainer" class="blueContainer">
+      <div id="blue" class="blue"></div>
+      <div id="cta" class="cta">
+        <img src="cta.png" />
+      </div>
+      <div id="tcs" class="tcs"></div>
+    </div>
+    <div id="copy4" class="copy4"></div>
+    <div id="logo" class="logo"></div>
+    <div id="chevronContainer" class="chevronContainer">
+      <div id="c1" class="c1"></div>
+      <div id="c2" class="c2"></div>
+      <div id="c3" class="c3"></div>
+      <div id="c4" class="c4"></div>
+      <div id="c5" class="c5"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    document.getElementById("wrapper").addEventListener("click", bgExitHandler, !1);
+    function bgExitHandler() {
+      window.open(window.clickTag);
+    }
+  </script>
+
+</body>
+
+</html>

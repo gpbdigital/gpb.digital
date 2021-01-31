@@ -1,0 +1,220 @@
+.bg2 {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 300px;
+  height: 250px;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-image: url("bg2.jpg");
+  opacity: 0;
+}
+
+.copy1 {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 243px;
+  height: 57px;
+  left: 28px;
+  top: 178px;
+  z-index: 5;
+  background-image: url("copy1.png");
+  opacity:0;
+}
+
+.copy2 {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 271px;
+  height: 58px;
+  left: 14px;
+  top: 177px;
+  z-index: 5;
+  background-image: url("copy2.png");
+  opacity:0;
+}
+
+.chevronContainer {
+  background-size: contain;
+  position: absolute;
+  width: 300px;
+  height: 250px;
+  left: -300px;
+  top: 0px;
+  z-index: 13;
+  opacity: 1;
+}
+.c1 {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 185px;
+  height: 276px;
+  left: 106px;
+  top: -11px;
+  z-index: 1;
+  background-image: url("c1.png");
+}
+.c2 {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 185px;
+  height: 276px;
+  left: 53px;
+  top: -11px;
+  z-index: 2;
+  background-image: url("c1.png");
+}
+.c3 {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 185px;
+  height: 276px;
+  left: -40px;
+  top: -11px;
+  z-index: 3;
+  background-image: url("c1.png");
+}
+.c4 {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 185px;
+  height: 276px;
+  left: 8px;
+  top: -11px;
+  z-index: 4;
+  background-image: url("c1.png");
+}
+.c5 {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 181px;
+  height: 255px;
+  left: 35px;
+  top: -1px;
+  z-index: 5;
+  background-image: url("c5.png");
+}
+
+.orangeContainer {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 400px;
+  height: 250px;
+  right:-100px;
+  top: 0;
+  z-index: 6;
+  opacity: 1;
+}
+
+.orange {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 300px;
+  height: 250px;
+  left: 0px;
+  top: 0;
+  background: #ff6400;
+  z-index: 6;
+  opacity: 0;
+}
+
+.copy3 {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 229px;
+  height: 57px;
+  left: 35px;
+  top: 97px;
+  z-index: 7;
+  background-image: url("copy3.png");
+  opacity:0;
+}
+
+.bonus {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 181px;
+  height: 255px;
+  left: -181px;
+  top: -1px;
+  z-index: 8;
+  background-image: url("c5.png");
+}
+.blueContainer {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 300px;
+  height: 250px;
+  left:-300px;
+  top: 0;
+  z-index: 7;
+  opacity: 1;
+}
+.blue {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 300px;
+  height: 250px;
+  left: 300px;
+  top: 0;
+  background: #102b72;
+  z-index: 1;
+  opacity: 0.7;
+}
+.cta {
+  display:block;
+  position: absolute;
+  overflow: hidden;
+  background-size: contain;
+  width: 239px;
+  height: 44px;
+  z-index: 2;
+  left: 330px;
+  top: 130px;
+  opacity: 1;
+  -webkit-backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;
+}
+.cta img {
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;
+}
+.tcs {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 294px;
+  height: 35px;
+  left: 303px;
+  top: 209px;
+  background-image: url("tcs.png");
+  z-index: 2;
+  opacity: 1;
+}
+.copy4 {
+  background-size: contain;
+  position: absolute;
+  overflow: hidden;
+  width: 231px;
+  height: 53px;
+  left: 334px;
+  top: 65px;
+  background-image: url("copy4.png");
+  z-index: 2;
+  opacity: 1;
+}
