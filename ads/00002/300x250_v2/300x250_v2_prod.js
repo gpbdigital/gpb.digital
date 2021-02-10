@@ -743,9 +743,8 @@ if (reversed == null) { reversed = false; }
 	// bg2
 	this.instance_10 = new lib.bg2_mc();
 	this.instance_10.setTransform(150,125,1,1,0,0,0,150,125);
-	this.instance_10.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(291));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(95).to({alpha:0},5).wait(191));
 
 	// bg1
 	this.instance_11 = new lib.bg1_mc();
@@ -766,13 +765,13 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/bg3.png?1612978343693", id:"bg3"},
-		{src:"images/cta.png?1612978343693", id:"cta"},
-		{src:"images/curve.png?1612978343693", id:"curve"},
-		{src:"images/loan.png?1612978343693", id:"loan"},
-		{src:"images/logo1.png?1612978343693", id:"logo1"},
-		{src:"images/logo2.png?1612978343693", id:"logo2"},
-		{src:"images/tcs.png?1612978343693", id:"tcs"}
+		{src:"images/bg3.png?1612981333709", id:"bg3"},
+		{src:"images/cta.png?1612981333709", id:"cta"},
+		{src:"images/curve.png?1612981333709", id:"curve"},
+		{src:"images/loan.png?1612981333709", id:"loan"},
+		{src:"images/logo1.png?1612981333709", id:"logo1"},
+		{src:"images/logo2.png?1612981333709", id:"logo2"},
+		{src:"images/tcs.png?1612981333709", id:"tcs"}
 	],
 	preloads: []
 };
