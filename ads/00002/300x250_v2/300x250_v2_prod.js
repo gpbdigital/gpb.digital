@@ -46,7 +46,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,323,333);
 (lib.loan = function() {
 	this.initialize(img.loan);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,325,38);
+p.nominalBounds = new cjs.Rectangle(0,0,368,29);
 
 
 (lib.logo1 = function() {
@@ -214,7 +214,7 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.loans_mc, new cjs.Rectangle(0,0,162,19), null);
+}).prototype = getMCSymbolPrototype(lib.loans_mc, new cjs.Rectangle(0,0,183.5,14.5), null);
 
 
 (lib.curve_innter_mc = function(mode,startPosition,loop,reversed) {
@@ -765,13 +765,13 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/bg3.png?1612981333709", id:"bg3"},
-		{src:"images/cta.png?1612981333709", id:"cta"},
-		{src:"images/curve.png?1612981333709", id:"curve"},
-		{src:"images/loan.png?1612981333709", id:"loan"},
-		{src:"images/logo1.png?1612981333709", id:"logo1"},
-		{src:"images/logo2.png?1612981333709", id:"logo2"},
-		{src:"images/tcs.png?1612981333709", id:"tcs"}
+		{src:"images/bg3.png?1613064374894", id:"bg3"},
+		{src:"images/cta.png?1613064374894", id:"cta"},
+		{src:"images/curve.png?1613064374894", id:"curve"},
+		{src:"images/loan.png?1613064374894", id:"loan"},
+		{src:"images/logo1.png?1613064374894", id:"logo1"},
+		{src:"images/logo2.png?1613064374894", id:"logo2"},
+		{src:"images/tcs.png?1613064374894", id:"tcs"}
 	],
 	preloads: []
 };
