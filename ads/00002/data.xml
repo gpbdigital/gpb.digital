@@ -3,5 +3,6 @@
     <ad width="300" height="250" name="300x250" file="300x250" type="html"></ad>
     <ad width="300" height="600" name="300x600" file="300x600" type="html"></ad>
     <ad width="970" height="250" name="970x250" file="970x250" type="html"></ad>
+    <ad width="728" height="90" name="728x90" file="728x90" type="html"></ad>
   </group>
 </groups>
