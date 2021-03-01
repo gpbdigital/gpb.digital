@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"728x90_atlas_P_1", frames: [[0,0,1456,180],[1458,161,350,107],[1458,0,380,159]]}
+		{name:"728x90_home_atlas_P_1", frames: [[0,0,1456,180],[1458,161,350,107],[1458,0,380,159]]}
 ];
 
 
@@ -28,21 +28,21 @@ lib.ssMetadata = [
 
 
 (lib.bg3 = function() {
-	this.initialize(ss["728x90_atlas_P_1"]);
+	this.initialize(ss["728x90_home_atlas_P_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.logo = function() {
-	this.initialize(ss["728x90_atlas_P_1"]);
+	this.initialize(ss["728x90_home_atlas_P_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.logo2 = function() {
-	this.initialize(ss["728x90_atlas_P_1"]);
+	this.initialize(ss["728x90_home_atlas_P_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
@@ -1488,7 +1488,7 @@ if (reversed == null) { reversed = false; }
 
 
 // stage content:
-(lib._728x90 = function(mode,startPosition,loop,reversed) {
+(lib._728x90_home = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -1637,7 +1637,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/728x90_atlas_P_1.png?1614629731202", id:"728x90_atlas_P_1"}
+		{src:"images/728x90_home_atlas_P_1.png?1614632750588", id:"728x90_home_atlas_P_1"}
 	],
 	preloads: []
 };

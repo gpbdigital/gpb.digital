@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"300x250_atlas_1", frames: [[0,0,600,500],[602,0,323,333],[602,471,256,78],[602,335,322,134]]}
+		{name:"300x250_home_atlas_1", frames: [[0,0,600,500],[602,0,323,333],[602,471,256,78],[602,335,322,134]]}
 ];
 
 
@@ -28,28 +28,28 @@ lib.ssMetadata = [
 
 
 (lib.bg3pngcopy = function() {
-	this.initialize(ss["300x250_atlas_1"]);
+	this.initialize(ss["300x250_home_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.curve = function() {
-	this.initialize(ss["300x250_atlas_1"]);
+	this.initialize(ss["300x250_home_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.logo1 = function() {
-	this.initialize(ss["300x250_atlas_1"]);
+	this.initialize(ss["300x250_home_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.logo2 = function() {
-	this.initialize(ss["300x250_atlas_1"]);
+	this.initialize(ss["300x250_home_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
@@ -1032,7 +1032,7 @@ p.nominalBounds = new cjs.Rectangle(-130.7,-123.9,279.7,290.9);
 
 
 // stage content:
-(lib._300x250 = function(mode,startPosition,loop,reversed) {
+(lib._300x250_home = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -1177,7 +1177,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/300x250_atlas_1.png?1614598830429", id:"300x250_atlas_1"}
+		{src:"images/300x250_home_atlas_1.png?1614632762574", id:"300x250_home_atlas_1"}
 	],
 	preloads: []
 };
