@@ -1,0 +1,91 @@
+﻿{"frames": {
+
+"CachedBmp_1":
+{
+	"frame": {"x":310,"y":92,"w":33,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":90},
+	"sourceSize": {"w":33,"h":90}
+},
+"CachedBmp_10":
+{
+	"frame": {"x":0,"y":0,"w":935,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":935,"h":90},
+	"sourceSize": {"w":935,"h":90}
+},
+"CachedBmp_2":
+{
+	"frame": {"x":230,"y":92,"w":43,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":90},
+	"sourceSize": {"w":43,"h":90}
+},
+"CachedBmp_3":
+{
+	"frame": {"x":185,"y":92,"w":43,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":90},
+	"sourceSize": {"w":43,"h":90}
+},
+"CachedBmp_4":
+{
+	"frame": {"x":275,"y":92,"w":33,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":90},
+	"sourceSize": {"w":33,"h":90}
+},
+"CachedBmp_5":
+{
+	"frame": {"x":0,"y":92,"w":46,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":90},
+	"sourceSize": {"w":46,"h":90}
+},
+"CachedBmp_6":
+{
+	"frame": {"x":48,"y":92,"w":45,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":90},
+	"sourceSize": {"w":45,"h":90}
+},
+"CachedBmp_7":
+{
+	"frame": {"x":937,"y":0,"w":46,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":90},
+	"sourceSize": {"w":46,"h":90}
+},
+"CachedBmp_8":
+{
+	"frame": {"x":140,"y":92,"w":43,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":90},
+	"sourceSize": {"w":43,"h":90}
+},
+"CachedBmp_9":
+{
+	"frame": {"x":95,"y":92,"w":43,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":90},
+	"sourceSize": {"w":43,"h":90}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "21.0.3.38773",
+	"image": "970x250_v2_atlas_2.png",
+	"format": "undefined",
+	"size": {"w":1024,"h":256},
+	"scale": "1"
+}
+}
