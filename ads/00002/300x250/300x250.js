@@ -84,7 +84,7 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib.bg3pngcopy();
-	this.instance.setTransform(-150,-125,0.1546,0.5);
+	this.instance.setTransform(-150,-125,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -107,7 +107,7 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib.bg3pngcopy();
-	this.instance.setTransform(-150,-125,0.1546,0.5);
+	this.instance.setTransform(-150,-125,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -965,6 +965,29 @@ if (reversed == null) { reversed = false; }
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).wait(29).call(this.frame_29).wait(2));
 
+	// mask_idn (mask)
+	var mask = new cjs.Shape();
+	mask._off = true;
+	var mask_graphics_0 = new cjs.Graphics().p("AolLLIAA2VIRLAAIAAWVg");
+	var mask_graphics_8 = new cjs.Graphics().p("AolLLIAA2VIRLAAIAAWVg");
+	var mask_graphics_15 = new cjs.Graphics().p("AoMTTIAAwNIgyAAIAA2VIAyAAIAAgDIRLAAMAAAAmlg");
+	var mask_graphics_22 = new cjs.Graphics().p("AxLWvIAA2WIRLAAIAAgxIhFAAIAA2WISRAAMAAAAmlIxMAAIAAG4g");
+	var mask_graphics_29 = new cjs.Graphics().p("AxLWvIAA2WIRLAAIAAgxIhFAAIAA2WISRAAMAAAAmlIxMAAIAAG4g");
+
+	this.timeline.addTween(cjs.Tween.get(mask).to({graphics:mask_graphics_0,x:-88.95,y:110.55}).wait(8).to({graphics:mask_graphics_8,x:126.5,y:12.05}).wait(7).to({graphics:mask_graphics_15,x:129,y:61.525}).wait(7).to({graphics:mask_graphics_22,x:78,y:83.525}).wait(7).to({graphics:mask_graphics_29,x:78,y:83.525}).wait(2));
+
+	// Layer_1
+	this.instance = new lib.curve_innter_mc();
+	this.instance.setTransform(80.5,83,1,1,0,0,0,80.5,83);
+
+	var maskedShapeInstanceList = [this.instance];
+
+	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
+		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
+	}
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({rotation:360},29).wait(2));
+
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
@@ -1154,7 +1177,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/300x250_atlas_1.png?1614594740111", id:"300x250_atlas_1"}
+		{src:"images/300x250_atlas_1.png?1614598830429", id:"300x250_atlas_1"}
 	],
 	preloads: []
 };
