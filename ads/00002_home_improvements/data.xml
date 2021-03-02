@@ -2,7 +2,9 @@
   <group name="CMS Marketing: Member First Credit Union">
     <ad width="300" height="250" name="300x250 Home Improvements" file="300x250_home" type="html"></ad>
     <ad width="300" height="600" name="300x600 Home Improvements" file="300x600_home" type="html"></ad>
+    <ad width="120" height="600" name="120x600 Home Improvements" file="120x600_home" type="html"></ad>
     <ad width="970" height="250" name="970x250 Home Improvements" file="970x250_home" type="html"></ad>
     <ad width="728" height="90" name="728x90 Home Improvements" file="728x90_home" type="html"></ad>
+    <ad width="320" height="50" name="320x50 Home Improvements" file="320x50_home" type="html"></ad>
   </group>
 </groups>
