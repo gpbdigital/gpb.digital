@@ -1,0 +1,10 @@
+<groups>
+  <group name="CMS Marketing: Member First Credit Union">
+    <ad width="300" height="250" name="300x250 School" file="300x250_school" type="html"></ad>
+    <ad width="300" height="600" name="300x600 School" file="300x600_school" type="html"></ad>
+    <ad width="120" height="600" name="120x600 School" file="120x600_school" type="html"></ad>
+    <ad width="970" height="250" name="970x250 School" file="970x250_school" type="html"></ad>
+    <ad width="728" height="90" name="728x90 School" file="728x90_school" type="html"></ad>
+    <ad width="320" height="50" name="320x50 School" file="320x50_school" type="html"></ad>
+  </group>
+</groups>
