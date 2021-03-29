@@ -11,8 +11,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
-<title>320x50_school</title>
-<!-- write your code here -->
+<meta name="ad.size” content=”width=320,height=50">
+<script>
+var clickTag = "http://www.google.com"; 
+</script>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script src="320x50_school.js?1614860651202"></script>
 <script>
@@ -60,7 +62,7 @@ function handleComplete(evt,comp) {
 </head>
 <body onload="init();" style="margin:0px;">
 	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:320px; height:50px">
-		<canvas id="canvas" width="320" height="50" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<canvas onclick="window.open(window.clickTag);" id="canvas" width="320" height="50" style="cursor:pointer;position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:320px; height:50px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
