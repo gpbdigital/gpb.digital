@@ -3,7 +3,7 @@ Vue.component("donutChart", {
   props: ["dataPoints"],
   data: function () {
     return {
-      angleOffset: -220,
+      angleOffset: -190,
       chartData: [],
       colors: [],
       cx: 80,
@@ -16,7 +16,7 @@ Vue.component("donutChart", {
   computed: {
     // adjust the circumference to add small white gaps
     adjustedCircumference: function () {
-      return this.circumference - 1.5;
+      return this.circumference - 2;
     },
     circumference: function () {
       return 2 * Math.PI * this.radius;
@@ -29,6 +29,11 @@ Vue.component("donutChart", {
     calculateChartData: function () {
       this.sortedValues.forEach((dataVal, index) => {
         const { x, y } = this.calculateTextCoords(dataVal, this.angleOffset);
+        
+        /*var _calculateTextCoords = this.calculateTextCoords(dataVal, this.angleOffset),
+            x = _calculateTextCoords.x,
+            y = _calculateTextCoords.y;*/
+            
         const data = {
           degrees: this.angleOffset,
           textX: x,
@@ -38,11 +43,16 @@ Vue.component("donutChart", {
         this.chartData.push(data);
         this.angleOffset = this.dataPercentage(dataVal) * 360 + this.angleOffset;
       });
+      
     },
     sortInitialValues: function () {
       for (i = 0; i < this.dataPoints.length; i++) {
-        this.sortedValues.push(this.dataPoints[i].value);
-        this.colors.push(this.dataPoints[i].color);
+
+        if(this.dataPoints[i].value > 0 ){
+          this.sortedValues.push(this.dataPoints[i].value);
+          this.colors.push(this.dataPoints[i].color);
+        }
+        
       }
       console.log(this.sortedValues)
       return this.sortedValues;
