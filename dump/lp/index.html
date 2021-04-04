@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/styles.css" media="screen,projection" />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{Firstname}, your media plan starts here</title>
+</head>
+
+<body>
+  <div id="app" class="container">
+
+    <div class="row">
+      <div class="col s12 center-align">
+        <h1>{Firstname}, your media plan starts here</h1>
+        <p>Congratulations on taking the first step to {insertMO} for {companyname}.
+          Div right into you personal recommendations below.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s3">
+        <p>MO</p>
+        <p>Online Sales</p>
+      </div>
+      <div class="col s3">
+        <p>EXAMPLES OF KPIs</p>
+        <p>Purchases, Subscriptions</p>
+      </div>
+      <div class="col s3">
+        <p>EXAMPLES OF XXX</p>
+        <p>Cost per acquisition, return on ad spend</p>
+      </div>
+      <div class="col s3">
+        <p>YOUR SELECTED BUDGET</p>
+        <p>£1,000 - £5,000</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <div class="card z-depth-3 center-align">
+          <div class="card-content">
+            <p>Budget split<sup>*</sup> and recommendations per campaign type based on your budget of {insert budget range}:</p>
+          </div>
+          <div class="card-content">
+
+            <donut-chart :data-points="dataPoints" ref="donutChart"></donut-chart>
+
+            <div class="legend">
+
+              <div v-for="(value, index) in dataPoints">
+                <div v-bind:style="{ color: value.color }">
+                  {{ value.label }}: {{ value.value }}
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="card-content">
+            <p><sup>*</sup> calculated based on spend distribution across advertisers similair to yours.</p>
+          </div>
+          <div class="card-content">
+            <a class="waves-effect blue darken-1 btn" target="_BLANK" herf="#">Download as PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/x-template" id="donutTemplate">
+
+    <svg height="160" width="160" viewBox="0 0 160 160" class="donut-chart">
+                <g v-for="(value, index) in sortedValues">
+                    <circle v-on:mouseover="greet(value)" :cx="cx" :cy="cy" :r="radius" :stroke="colors[index]" :stroke-width="strokeWidth" :stroke-dasharray="adjustedCircumference" :stroke-dashoffset="calculateStrokeDashOffset(value, circumference)" fill="transparent" :transform="returnCircleTransformValue(index)" />
+                     <text v-if="segmentBigEnough(value)" text-anchor="middle" dy="3px" :x="chartData[index].textX" :y="chartData[index].textY">{{ value }}%</text>
+                </g>
+            </svg>
+        
+        </script>
+
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script>
+    let searchValue = 40,
+      displayValue = 10,
+      youtubeValue = 20,
+      shoppingValue = 30;
+    new Vue({
+      el: "#app",
+      data() {
+        return {
+          dataPoints: [{
+              label: "Search campaigns",
+              value: searchValue,
+              color: "#2d83fc"
+            },
+            {
+              label: "Display campaigns",
+              value: displayValue,
+              color: "#00ac47"
+            },
+            {
+              label: "Youtube campaigns",
+              value: youtubeValue,
+              color: "#fe2c25"
+            },
+            {
+              label: "Shopping ads",
+              value: shoppingValue,
+              color: "#ffbb00"
+            },
+          ],
+          chartData: []
+        };
+      },
+      methods: {
+        getChartData: function() {
+          var donutChart = this.$refs.donutChart.chartData;
+          //console.log(donutChart)
+        }
+      },
+      mounted() {
+        this.getChartData();
+      }
+    });
+  </script>
+
+</body>
+
+</html>
