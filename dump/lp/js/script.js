@@ -1,5 +1,6 @@
 Vue.component("donutChart", {
   template: "#donutTemplate",
+  name: 'donutChart',
   props: ["dataPoints"],
   data: function () {
     return {
