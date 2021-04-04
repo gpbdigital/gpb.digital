@@ -28,22 +28,22 @@ Vue.component("donutChart", {
       });
     },
     calculateChartData: function () {
-      this.sortedValues.forEach((dataVal, index) => {
-        const { x, y } = this.calculateTextCoords(dataVal, this.angleOffset);
+      for (i = 0; i < this.sortedValues.length; i++) {
         
-        /*var _calculateTextCoords = this.calculateTextCoords(dataVal, this.angleOffset),
-            x = _calculateTextCoords.x,
-            y = _calculateTextCoords.y;*/
-            
-        const data = {
+        var _this$calculateTextCo = this.calculateTextCoords(this.sortedValues[i], this.angleOffset),
+            x = _this$calculateTextCo.x,
+            y = _this$calculateTextCo.y;
+      
+        var data = {
           degrees: this.angleOffset,
           textX: x,
           textY: y
         };
-
+      
         this.chartData.push(data);
-        this.angleOffset = this.dataPercentage(dataVal) * 360 + this.angleOffset;
-      });
+      
+        this.angleOffset = this.dataPercentage(this.sortedValues[i]) * 360 + this.angleOffset;
+      } 
       
     },
     sortInitialValues: function () {
