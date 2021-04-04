@@ -1,7 +1,7 @@
 Vue.component("donutChart", {
   template: "#donutTemplate",
   props: ["dataPoints"],
-  data() {
+  data: function () {
     return {
       angleOffset: -220,
       chartData: [],
@@ -15,16 +15,16 @@ Vue.component("donutChart", {
   },
   computed: {
     // adjust the circumference to add small white gaps
-    adjustedCircumference() {
+    adjustedCircumference: function () {
       return this.circumference - 1.5;
     },
-    circumference() {
+    circumference: function () {
       return 2 * Math.PI * this.radius;
     },
-    dataTotal() {
+    dataTotal: function () {
       return this.sortedValues.reduce((acc, val) => acc + val);
     },
-    calculateChartData() {
+    calculateChartData: function () {
       this.sortedValues.forEach((dataVal, index) => {
         const { x, y } = this.calculateTextCoords(dataVal, this.angleOffset);
         // start at -90deg so that the largest segment is perpendicular to top
@@ -38,7 +38,7 @@ Vue.component("donutChart", {
         this.angleOffset = this.dataPercentage(dataVal) * 360 + this.angleOffset;
       });
     },
-    sortInitialValues() {
+    sortInitialValues: function () {
       for (i = 0; i < this.dataPoints.length; i++) {
         this.sortedValues.push(this.dataPoints[i].value);
         this.colors.push(this.dataPoints[i].color);
@@ -88,7 +88,7 @@ Vue.component("donutChart", {
     }
   },
 
-  mounted() {
+  mounted: function () {
     this.sortInitialValues;
     this.calculateChartData;
   }

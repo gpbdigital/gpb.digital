@@ -3,10 +3,10 @@
 
 <head>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="./css/materialize.min.css" media="screen,projection" />
-  <link type="text/css" rel="stylesheet" href="./css/styles.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/styles.css" media="screen,projection" />
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
-  <script src='https://polyfill.io/v3/polyfill.min.js'></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{Firstname}, your media plan starts here</title>
 </head>
@@ -75,19 +75,18 @@
 
   </div>
 
-  <script type="text/x-template" id="donutTemplate">
+ <script type="text/x-template" id="donutTemplate">
 
     <svg height="160" width="160" viewBox="0 0 160 160" class="donut-chart">
-                <g v-for="(value, index) in sortedValues">
-                    <circle v-on:mouseover="greet(value)" :cx="cx" :cy="cy" :r="radius" :stroke="colors[index]" :stroke-width="strokeWidth" :stroke-dasharray="adjustedCircumference" :stroke-dashoffset="calculateStrokeDashOffset(value, circumference)" fill="transparent" :transform="returnCircleTransformValue(index)" />
-                     <text v-if="segmentBigEnough(value)" text-anchor="middle" dy="3px" :x="chartData[index].textX" :y="chartData[index].textY">{{ value }}%</text>
-                </g>
-            </svg>
-        
-        </script>
+        <g v-for="(value, index) in sortedValues">
+            <circle v-on:mouseover="greet(value)" :cx="cx" :cy="cy" :r="radius" :stroke="colors[index]" :stroke-width="strokeWidth" :stroke-dasharray="adjustedCircumference" :stroke-dashoffset="calculateStrokeDashOffset(value, circumference)" fill="transparent" :transform="returnCircleTransformValue(index)" />
+            <text v-if="segmentBigEnough(value)" text-anchor="middle" dy="3px" :x="chartData[index].textX" :y="chartData[index].textY">{{ value }}%</text>
+        </g>
+    </svg>
+</script>
 
-  <script type="text/javascript" src="./js/materialize.min.js"></script>
-  <script type="text/javascript" src="./js/script.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
   <script>
     let searchValue = 40,
       displayValue = 10,
@@ -95,7 +94,7 @@
       shoppingValue = 30;
     new Vue({
       el: "#app",
-      data() {
+      data: function () {
         return {
           dataPoints: [{
               label: "Search campaigns",
@@ -124,10 +123,9 @@
       methods: {
         getChartData: function() {
           var donutChart = this.$refs.donutChart.chartData;
-          //console.log(donutChart)
         }
       },
-      mounted() {
+      mounted: function () {
         this.getChartData();
       }
     });
