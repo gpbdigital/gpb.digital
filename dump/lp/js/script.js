@@ -61,11 +61,11 @@ Vue.component("donutChart", {
   },
 
   methods: {
-    calculateStrokeDashOffset(dataVal, circumference) {
+    calculateStrokeDashOffset: function(dataVal, circumference) {
       const strokeDiff = this.dataPercentage(dataVal) * circumference;
       return circumference - strokeDiff;
     },
-    calculateTextCoords(dataVal, angleOffset) {
+    calculateTextCoords: function(dataVal, angleOffset) {
       // t must be radians
       // x(t) = r cos(t) + j
       // y(t) = r sin(t) + j
@@ -80,22 +80,22 @@ Vue.component("donutChart", {
 
       return textCoords;
     },
-    degreesToRadians(angle) {
+    degreesToRadians: function(angle) {
       return angle * (Math.PI / 180);
     },
-    dataPercentage(dataVal) {
+    dataPercentage: function(dataVal) {
       return dataVal / this.dataTotal;
     },
-    percentageString(dataVal) {
+    percentageString: function(dataVal) {
       return `${Math.round(this.dataPercentage(dataVal) * 100)}%`;
     },
-    returnCircleTransformValue(index) {
+    returnCircleTransformValue: function(index) {
       return `rotate(${this.chartData[index].degrees}, ${this.cx}, ${this.cy})`;
     },
-    segmentBigEnough(dataVal) {
+    segmentBigEnough: function(dataVal) {
       return Math.round(this.dataPercentage(dataVal) * 100) > 5;
     },
-    greet(value) {
+    greet: function(value) {
       console.log(value);
     }
   },
