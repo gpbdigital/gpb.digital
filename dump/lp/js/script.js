@@ -22,12 +22,13 @@ Vue.component("donutChart", {
       return 2 * Math.PI * this.radius;
     },
     dataTotal: function () {
-      return this.sortedValues.reduce((acc, val) => acc + val);
+      return this.sortedValues.reduce(function (acc, val) {
+        return acc + val;
+      });
     },
     calculateChartData: function () {
       this.sortedValues.forEach((dataVal, index) => {
         const { x, y } = this.calculateTextCoords(dataVal, this.angleOffset);
-        // start at -90deg so that the largest segment is perpendicular to top
         const data = {
           degrees: this.angleOffset,
           textX: x,
