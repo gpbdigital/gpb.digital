@@ -80,7 +80,7 @@
     <svg height="160" width="160" viewBox="0 0 160 160" class="donut-chart">
         <g v-for="(value, index) in sortedValues">
             <circle v-on:mouseover="greet(value)" :cx="cx" :cy="cy" :r="radius" :stroke="colors[index]" :stroke-width="strokeWidth" :stroke-dasharray="adjustedCircumference" :stroke-dashoffset="calculateStrokeDashOffset(value, circumference)" fill="transparent" :transform="returnCircleTransformValue(index)" />
-            <!--<text v-if="segmentBigEnough(value)" text-anchor="middle" dy="3px" :x="chartData[index].textX" :y="chartData[index].textY">{{ value }}%</text>-->
+            <text v-if="segmentBigEnough(value)" text-anchor="middle" dy="3px" :x="chartData[index].textX" :y="chartData[index].textY">{{ value }}%</text>
         </g>
     </svg>
 </script>

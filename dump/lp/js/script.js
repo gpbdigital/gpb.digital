@@ -87,10 +87,12 @@ Vue.component("donutChart", {
       return dataVal / this.dataTotal;
     },
     percentageString: function(dataVal) {
-      return `${Math.round(this.dataPercentage(dataVal) * 100)}%`;
+      //return `${Math.round(this.dataPercentage(dataVal) * 100)}%`;
+      return (this.dataPercentage(dataVal) * 100) + "%";
     },
     returnCircleTransformValue: function(index) {
-      return `rotate(${this.chartData[index].degrees}, ${this.cx}, ${this.cy})`;
+      //return `rotate(${this.chartData[index].degrees}, ${this.cx}, ${this.cy})`;
+      return "rotate("+this.chartData[index].degrees+", "+this.cx+", "+this.cy+")";
     },
     segmentBigEnough: function(dataVal) {
       return Math.round(this.dataPercentage(dataVal) * 100) > 5;
