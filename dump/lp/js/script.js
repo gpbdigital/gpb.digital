@@ -62,7 +62,7 @@ Vue.component("donutChart", {
 
   methods: {
     calculateStrokeDashOffset: function(dataVal, circumference) {
-      const strokeDiff = this.dataPercentage(dataVal) * circumference;
+      var strokeDiff = this.dataPercentage(dataVal) * circumference;
       return circumference - strokeDiff;
     },
     calculateTextCoords: function(dataVal, angleOffset) {
@@ -70,10 +70,10 @@ Vue.component("donutChart", {
       // x(t) = r cos(t) + j
       // y(t) = r sin(t) + j
 
-      const angle = (this.dataPercentage(dataVal) * 360) / 2 + angleOffset;
-      const radians = this.degreesToRadians(angle);
+      var angle = (this.dataPercentage(dataVal) * 360) / 2 + angleOffset;
+      var radians = this.degreesToRadians(angle);
 
-      const textCoords = {
+      var textCoords = {
         x: this.radius * Math.cos(radians) + this.cx,
         y: this.radius * Math.sin(radians) + this.cy
       };
